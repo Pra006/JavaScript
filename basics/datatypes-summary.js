@@ -19,8 +19,8 @@
 let fruits= "apple"
 let mango = fruits
 mango = "banana"
-// console.log(mango);
-// console.log(mango);
+console.log(mango);
+console.log(mango);
 
 
 let userone={
