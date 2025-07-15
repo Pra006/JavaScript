@@ -28,10 +28,10 @@ for (let i = 0; i < 10; i++) {
 for (let index = 0; index <= 10; index++) {
    if (index == 5)
    {
-      console.log(`Detected 5`);
-      continue
+      // console.log(`Detected 5`);
+      // continue
    }
-   console.log(`value of index is ${index}`);
+  // console.log(`value of index is ${index}`);
 }
 
 
