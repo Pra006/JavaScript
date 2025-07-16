@@ -36,3 +36,41 @@ if(e.target.id === 'purple'){
  })
 })
 
+# solution code
+## project 2
+```
+javascript
+```
+const form = document.querySelector('form');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const height = parseInt(document.querySelector('#height').value);
+  const weight = parseInt(document.querySelector('#weight').value);
+  const results = document.querySelector('#results');
+
+  if (height === '' || height < 0 || isNaN(height)) {
+    results.innerHTML = `please give a valid height ${height}`;
+  } else if (weight === '' || weight < 0 || isNaN(weight)) {
+    results.innerHTML = `please give a valid weight ${weight}`;
+  } else {
+    const bmi = (weight / ((height * height) / 10000)).toFixed(3);
+   let message = '';
+   if(weight<18.6)
+   {
+     message = "your weight is less than 18.6";
+   }
+   else if(weight>18.6 && weight < 24.9)
+   {
+     message = "your weight lies in noraml range(18.6 to 24.9)";
+   }
+   else{
+    message = "you are overweight(greater than 24.9)";
+   }
+
+
+    results.innerHTML = `<span>${bmi} - ${message}</span>`;
+  }
+});
+
