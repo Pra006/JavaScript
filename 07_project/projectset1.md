@@ -7,7 +7,7 @@
 
 ## project 1
 
-```javascript```
+```javascript
 console.log("hitesh")
 
 const buttons = document.querySelectorAll(".button")
@@ -36,11 +36,14 @@ if(e.target.id === 'purple'){
  })
 })
 
+```
+
+
 # solution code
 ## project 2
 ```
 javascript
-```
+
 const form = document.querySelector('form');
 
 form.addEventListener('submit', function (e) {
@@ -73,4 +76,18 @@ form.addEventListener('submit', function (e) {
     results.innerHTML = `<span>${bmi} - ${message}</span>`;
   }
 });
+
+```
+
+
+## Project 3 solution code
+```javaScript
+const clock = document.getElementById('clock')
+
+setInterval(function(){
+  let date = new Date()
+  //console.log(date.toLocaleString());
+  clock.innerHTML = date.toLocaleTimeString();
+},1000)
+```
 
