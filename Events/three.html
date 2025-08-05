@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Chai aur javascript</h1>
+    <button id="start">start</button>
+    <button id="Stop">stop</button>
+</body>
+<script>
+    let Intervalid = null;
+   const sayDate= function(str){
+    console.log(str, Date.now());
+   }
+const start= document.querySelector('#start').addEventListener('click', function() {
+    if (Intervalid) {
+      clearInterval(Intervalid);
+    }
+    Intervalid = setInterval(sayDate, 1000, 'hello');
+    console.log('Interval started');
+});
+  const stop = document.querySelector('#Stop');
+  stop.addEventListener('click', function() {
+    clearInterval(Intervalid);
+    console.log('Interval cleared');
+  });
+</script>
+</html>
